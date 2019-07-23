@@ -1,0 +1,32 @@
+<html>
+{% load static %}
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static '/NBA_Stats/main_style.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href= "https://i.imgur.com/06eb7UD.jpg" type="image/x-icon"/>	
+</head>
+<body style="font-weight: bold">
+
+<div class="navbar">
+  <a href="/NBA_Stats/"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="/NBA_Stats/{{Random_Player}}"><i class="fa fa-fw fa-search"></i> Random Player</a> 
+  <a href="#"><i class="fa fa-fw fa-github"></i> Source Code</a> 
+</div>
+
+<div style="text-align: center;">
+	<div class="header_text">StatFreaks Inc.</div>
+	<form onsubmit="location.href='/NBA_Stats/'+document.getElementById('Player_searched').value; return false;">
+  		<input type="text" id="Player_searched" placeholder="Search a player"/>
+  		<input type="submit" />
+	</form>
+</div>
+
+<div class= "footer">
+	<a style="text-decoration: none; color:black"href="http://www.navidrayhan.com">NAVID |</a>
+	<a style="color:black" href="https://github.com/NavidRayhan"><i id="bottom_icons" class="fa fa-fw fa-github"></i></a>
+	<a style="color:black" href="https://www.linkedin.com/in/navidrayhan/"><i id="bottom_icons" class="fa fa-fw fa-linkedin"></i></a>
+	<a style="color:black" href="mailto:work.navidrayhan@gmail.com"><i id="bottom_icons" class="fa fa-fw fa-envelope"></i></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<html>
+{% load static %}
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static '/NBA_Stats/main_style.css' %}">
+	<link rel="shortcut icon" href= "https://i.imgur.com/06eb7UD.jpg" type="image/x-icon"/>	
+</head>
+
+<body>
+
+<div class="navbar" style="font-weight: bold">
+  <a href="/NBA_Stats/"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="/NBA_Stats/{{Random_Player}}"><i class="fa fa-fw fa-search"></i> Random Player</a> 
+  <a href="#"><i class="fa fa-fw fa-github"></i> Source Code</a> 
+</div>
+<div class="player_name"> {{Most_Recent_Season.Name}} </div>
+
+<div class="contain">
+	<table id= "stats_table">
+		<caption>Recent Season</caption>
+		<tr>
+			<th>Stat</th>
+			<th>Value</th>
+			<th>{{Most_Recent_Season.Year}} Rank</th>
+		</tr>
+		<tr>
+			<td>PPG</td>
+			<td>{{Most_Recent_Season.Points}}</td>
+			<td>{{Recent_Rank.Points}}</td>
+		</tr>
+		<tr>
+			<td>AST</td>
+			<td>{{Most_Recent_Season.Assists}}</td>
+			<td>{{Recent_Rank.Assists}}</td>
+		</tr>
+		<tr>
+			<td>TRB</td>
+			<td>{{Most_Recent_Season.Rebounds}}</td>
+			<td>{{Recent_Rank.Rebounds}}</td>
+		</tr>
+		<tr>
+			<td>FG%</td>
+			<td>{{Most_Recent_Season.Field_Goal_percentage}}</td>
+			<td>{{Recent_Rank.Field_Goal_percentage}}</td>
+		</tr>
+		<tr>
+			<td>3P%</td>
+			<td>{{Most_Recent_Season.ThreeP_percentage}}</td>
+			<td>{{Recent_Rank.ThreeP_percentage}}</td>
+		</tr>
+		<tr>
+			<td>Games</td>
+			<td>{{Most_Recent_Season.Games}}</td>
+			<td>{{Recent_Rank.Games}}</td>
+		</tr>
+		<tr>
+			<td>FT%</td>
+			<td>{{Most_Recent_Season.Free_throw_percentage}}</td>
+			<td>{{Recent_Rank.Free_throw_percentage}}</td>
+		</tr>
+		<tr>
+			<td>FT</td>
+			<td>{{Most_Recent_Season.Free_throws}}</td>
+			<td>{{Recent_Rank.Free_throws}}</td>
+		</tr>
+		<tr>
+			<td>Steals</td>
+			<td>{{Most_Recent_Season.Steals}}</td>
+			<td>{{Recent_Rank.Steals}}</td>
+		</tr>
+		<tr>
+			<td>Blocks</td>
+			<td>{{Most_Recent_Season.Blocks}}</td>
+			<td>{{Recent_Rank.Blocks}}</td>
+		</tr>
+	</table>
+</div>
+
+<div class="contain">
+	<table id= "stats_table">
+		<caption>Best Season</caption>
+		<tr>
+			<th>Stat</th>
+			<th>Value</th>
+			<th>{{Best_Season.Year}} Rank</th>
+		</tr>
+		<tr>
+			<td>PPG</td>
+			<td>{{Best_Season.Points}}</td>
+			<td>{{Best_Rank.Points}}</td>
+		</tr>
+		<tr>
+			<td>AST</td>
+			<td>{{Best_Season.Assists}}</td>
+			<td>{{Best_Rank.Assists}}</td>
+		</tr>
+		<tr>
+			<td>TRB</td>
+			<td>{{Best_Season.Rebounds}}</td>
+			<td>{{Best_Rank.Rebounds}}</td>
+		</tr>
+		<tr>
+			<td>FG%</td>
+			<td>{{Best_Season.Field_Goal_percentage}}</td>
+			<td>{{Best_Rank.Field_Goal_percentage}}</td>
+		</tr>
+		<tr>
+			<td>3P%</td>
+			<td>{{Best_Season.ThreeP_percentage}}</td>
+			<td>{{Best_Rank.ThreeP_percentage}}</td>
+		</tr>
+		<tr>
+			<td>Games</td>
+			<td>{{Best_Season.Games}}</td>
+			<td>{{Best_Rank.Games}}</td>
+		</tr>
+		<tr>
+			<td>FT%</td>
+			<td>{{Best_Season.Free_throw_percentage}}</td>
+			<td>{{Best_Rank.Free_throw_percentage}}</td>
+		</tr>
+		<tr>
+			<td>FT</td>
+			<td>{{Best_Season.Free_throws}}</td>
+			<td>{{Best_Rank.Free_throws}}</td>
+		</tr>
+		<tr>
+			<td>Steals</td>
+			<td>{{Best_Season.Steals}}</td>
+			<td>{{Best_Rank.Steals}}</td>
+		</tr>
+		<tr>
+			<td>Blocks</td>
+			<td>{{Best_Season.Blocks}}</td>
+			<td>{{Best_Rank.Blocks}}</td>
+		</tr>
+	</table>
+</div>
+<div class="contain">
+	<table id= "stats_table">
+		<caption>Career Averages</caption>
+		<tr>
+			<th>Stat</th>
+			<th>Value</th>
+		</tr>
+		<tr>
+			<td>PPG</td>
+			<td>{{Career_Averages_Basic.Points}}</td>
+		</tr>
+		<tr>
+			<td>AST</td>
+			<td>{{Career_Averages_Basic.Assists}}</td>
+		</tr>
+		<tr>
+			<td>TRB</td>
+			<td>{{Career_Averages_Basic.Rebounds}}</td>
+		</tr>
+		<tr>
+			<td>FG%</td>
+			<td>{{Career_Averages_Basic.Field_Goal_percentage}}</td>
+		</tr>
+		<tr>
+			<td>3P%</td>
+			<td>{{Career_Averages_Basic.ThreeP_percentage}}</td>
+		</tr>
+		<tr>
+			<td>Games</td>
+			<td>{{Career_Averages_Basic.Games}}</td>
+		</tr>
+		<tr>
+			<td>FT%</td>
+			<td>{{Career_Averages_Basic.Free_throw_percentage}}</td>
+		</tr>
+		<tr>
+			<td>FT</td>
+			<td>{{Career_Averages_Basic.Free_throws}}</td>
+		</tr>
+		<tr>
+			<td>Steals</td>
+			<td>{{Career_Averages_Basic.Steals}}</td>
+		</tr>
+		<tr>
+			<td>Blocks</td>
+			<td>{{Career_Averages_Basic.Blocks}}</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

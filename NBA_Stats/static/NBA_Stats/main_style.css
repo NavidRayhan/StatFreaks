@@ -1,0 +1,173 @@
+body {
+    background-image: url("/static/NBA_Stats/lillard.png");
+    background-size: cover;  
+    background-repeat: repeat;
+    background-position: right, left;
+    margin-left: -0px;
+    margin-right: -0px;
+    margin-top: -0.4px;
+    height: 100%;
+  }
+html {
+    height: 100%;
+    overflow: none;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+.header_text{
+	padding-top: 10%;
+  font-family: Agency FB, serif;
+	font-size: 120px;
+	font-weight: bold;
+	text-shadow: 3px 3px black;
+	text-align: center;
+	color: white;
+}
+@media screen and (max-width: 650px) {
+  .header_text {
+    font-size: 15vw;
+    padding-top: 20%;
+  }
+}
+
+.sub_head{
+  font-family: Trebuchet MS;
+  font-size: 20px;
+
+}
+.player_name{
+  padding-top: 7%;
+  font-family: Agency FB, serif;
+  font-size: 70px;
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+  text-align: center;
+  color: white;
+}
+@media screen and (max-width: 420px) {
+  .player_name {
+    font-size: 15vw;
+    padding-top: 36%;
+  }
+}
+.contain{
+  display: table-cell;
+  height: 200px;
+  width: 420px;
+  padding-left : 4%;
+}
+
+#stats_table{
+	font-family: "Trebuchet MS";
+  	border-collapse: collapse;
+  	width: 320px;
+  	background-color: white;
+  	opacity: 0.8;
+  	vertical-align: middle;
+}
+#stats_table td {
+  border: 1px solid #ddd;
+  padding: 4px;
+  text-align-last: center;
+}
+#stats_table th{
+  font-size: 18px;
+  background-color: #000000;
+  color:white;
+}
+#stats_table caption{
+  font-size: 25px;
+  color:white;
+  text-shadow: black 2px 2px;
+}
+
+@media screen and (max-width:1000px){
+  .contain{
+    display: inline;
+  }
+  #stats_table{
+  position: center;   
+  margin-left: 50%;
+  transform: translate(-50%);
+  width: 70vw
+  }
+
+}
+.navbar {
+  width: 100%;
+  background-color: #151313;
+  overflow: auto;
+  font-family: Trebuchet MS;
+  position: fixed;
+  z-index: 1;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #1E5088;
+}
+
+@media screen and (max-width: 420px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+  .header_text{
+    padding-top: 45%;
+  }
+}
+
+a,
+a:link,
+a:hover,
+a:focus,
+a:active,
+a:visited
+{
+    color:white;
+}
+
+#bottom_icons{
+  margin: -8px;
+}
+.footer{
+  font-size: 40px;
+  font-family: Agency FB; 
+  font-weight: bold; 
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 460px) {
+  .footer {
+    font-size: 8vw;
+  }
+  #bottom_icons{
+    margin: -5px;
+  }
+}
+.error_text{
+  padding-top: 10%;
+  font-family: Agency FB, serif;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+  text-align: center;
+  color: white;
+}
+@media screen and (max-width: 650px) {
+  .error_text {
+    font-size: 10vw;
+    padding-top: 20%;
+  }
+}
